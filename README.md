@@ -42,8 +42,8 @@ The last time I ran it, simple arithmetic sequences, where each number is the pr
 ---
 
 Here, I would like to notice, that this idea came to mind recently. 
-- If I’m mistaken in any way, please feel free to reach out—I’d love to discuss it. 
-- If I'm right, I would love as well to discuss it.
+- If this theory is mistaken in any way, please feel free to reach out—I’d love to discuss it. 
+- If this theory is right, I would love as well to discuss it.
 
 ## Source of inspiration
 
