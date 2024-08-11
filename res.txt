@@ -1,0 +1,12 @@
+{
+  seq: {
+    collatz: { data: [Array], length: 43 },
+    random: { data: [Array], length: 43 },
+    arithmetic: { data: [Array], length: 43 }
+  },
+  buff: {
+    collatz: { length: 172 },
+    random: { length: 172 },
+    arithmetic: { length: 172 }
+  }
+}
