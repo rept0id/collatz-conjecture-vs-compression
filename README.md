@@ -29,7 +29,7 @@ As we know, Collatz sequences eventually always end with the number 1. However, 
 
 Until this is proven, compression algorithms struggle to find a better pattern than simply undoing the described process (/2 || *3). This can sometimes result in a compression rate that is even worse than with random numbers, which, in computing, are not truly random.
 
-In the `res.txt` file, you can find a detailed example of the output of this program, or you can run it yourself by executing `node index.js`.
+In the `res.txt` file, you can find a detailed example of the output of this program, or you can run it yourself by executing `npm i` and `node index.js`.
 
 The last time I ran it, simple arithmetic sequences, where each number is the previous number plus 3, achieved a compression effectiveness of 44% with Zstandard (zstd) compression. Random numbers achieved 41%, while Collatz sequences achieved 38% effectiveness, which is significantly lower than random numbers.
 
