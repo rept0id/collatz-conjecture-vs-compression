@@ -8,12 +8,12 @@ function diffPc(originalValue: number, reducedValue: number): number {
 }
 
 // Generate an arithmetic sequence
-function generateArithmeticSequence(length: number, start: number = 1, step: number = 3): number[] {
+function generateArithmeticSequence(length: number, start: number = 99, step: number = -1): number[] {
     return Array.from({ length }, (_, i) => start + i * step);
 }
 
 // Generate a random sequence
-function generateRandomSequence(length: number, low: number = 1, high: number = 100): number[] {
+function generateRandomSequence(length: number, low: number = 10, high: number = 100): number[] {
     const sequence: number[] = [];
     for (let i = 0; i < length; i++) {
         sequence.push(Math.floor(Math.random() * (high - low + 1)) + low);
@@ -49,7 +49,7 @@ function toBuffer(sequence: number[]): Buffer {
 (async () => {
     let res = Object();
 
-    const collatzStart = 800; // Example starting number for Collatz sequence
+    const collatzStart = 92; // Example starting number for Collatz sequence
 
     // Generate sequences
     const collatzSeq = generateCollatzSequence(collatzStart);

@@ -35,8 +35,8 @@ The last time I ran it, simple arithmetic sequences, where each number is the pr
 
 | Method | Data | Effect |
 | --- | --- | --- |
-| Zstd | Arithmetic (n+3) | 44% |
-| Zstd | Random (1-100, JS Math.Random()) | 41% |
+| Zstd | Arithmetic (n=99;n-1) | 44% |
+| Zstd | Random (10-99, JS Math.Random()) | 41% |
 | Zstd | Collatz | 38% |
 
 ---
