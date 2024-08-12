@@ -31,13 +31,13 @@ Until this is proven, compression algorithms struggle to find a better pattern t
 
 In the `res.txt` file, you can find a detailed example of the output of this program, or you can run it yourself by executing `npm i` and `node index.js`.
 
-The last time I ran it, simple arithmetic sequences, where each number is the previous number plus 3, achieved a compression effectiveness of 44% with Zstandard (zstd) compression. Random numbers achieved 41%, while Collatz sequences achieved 38% effectiveness, which is significantly lower than random numbers.
+The last time I ran it, simple arithmetic sequences, where, starting from 99, each number is the previous number minus 1, achieved a compression effectiveness of 34% with Zstandard (zstd) compression. Random numbers achieved 33%, while Collatz sequences achieved 29% effectiveness, which is significantly lower than random numbers.
 
 | Method | Data | Effect |
 | --- | --- | --- |
-| Zstd | Arithmetic (n=99;n-1) | 44% |
-| Zstd | Random (10-99, JS Math.Random()) | 41% |
-| Zstd | Collatz | 38% |
+| Zstd | Arithmetic (n=99;n-1) | 34% |
+| Zstd | Random (10-99, JS Math.Random()) | 33% |
+| Zstd | Collatz | 29% |
 
 ---
 
