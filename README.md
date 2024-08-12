@@ -33,7 +33,7 @@ In the `res.txt` file, you can find a detailed example of the output of this pro
 
 The last time I ran it, simple arithmetic sequences, where, starting from 99, each number is the previous number minus 1, achieved a compression effectiveness of 34% with Zstandard (zstd) compression. Random numbers achieved 33%, while Collatz sequences achieved 29% effectiveness, which is significantly lower than random numbers.
 
-Also, random numbers tend to have a more chaotic nature, which can result in compression effectiveness that is either exceptionally good (>90%) or extremely bad (<5%). You have to run the program around 5 times and you will propably get one of those edge cases for random numbers. In contrast, Collatz sequences (and arithmetic) are more stable.
+Also, random numbers tend to have a more chaotic nature, which can result in compression effectiveness that is either exceptionally good (>90%) or extremely bad (<5%). Either you get one of those edge cases either you get an equatorial case like the one mentioned in the example data - never something in between. You have to run the program around 5 times and you will propably get one of those edge cases for random numbers. In contrast, Collatz sequences (and arithmetic) are more stable.
 
 | Method | Data | Effect | Stable |
 | --- | --- | --- | --- |
