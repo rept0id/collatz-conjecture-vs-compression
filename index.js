@@ -147,7 +147,7 @@ function toBuffer(sequence) {
                 console.error('Error during compression or decompression:', error_1);
                 return [3 /*break*/, 6];
             case 6:
-                console.log(JSON.stringify(res));
+                console.log(JSON.stringify(res, null, "\t"));
                 return [2 /*return*/];
         }
     });

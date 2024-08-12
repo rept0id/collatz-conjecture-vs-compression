@@ -119,5 +119,5 @@ function toBuffer(sequence: number[]): Buffer {
         console.error('Error during compression or decompression:', error);
     }
 
-    console.log(JSON.stringify(res));
+    console.log(JSON.stringify(res, null, "\t"));
 })();
