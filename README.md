@@ -33,11 +33,13 @@ In the `res.txt` file, you can find a detailed example of the output of this pro
 
 The last time I ran it, simple arithmetic sequences, where, starting from 99, each number is the previous number minus 1, achieved a compression effectiveness of 34% with Zstandard (zstd) compression. Random numbers achieved 33%, while Collatz sequences achieved 29% effectiveness, which is significantly lower than random numbers.
 
-| Method | Data | Effect |
-| --- | --- | --- |
-| Zstd | Arithmetic (n=99;n-1) | 34% |
-| Zstd | Random (10-99, JS Math.Random()) | 33% |
-| Zstd | Collatz | 29% |
+Also, random numbers tend to have a more chaotic nature, which can result in compression effectiveness that is either exceptionally good (>90%) or extremely bad (<5%). You have to run the program around 5 times and you will propably get one of those edge cases for random numbers. In contrast, Collatz sequences (and arithmetic) are more stable.
+
+| Method | Data | Effect | Stable |
+| --- | --- | --- | --- |
+| Zstd | Arithmetic (n=99;n-1) | 34% | True |
+| Zstd | Random (10-99, JS Math.Random()) | 33% | False |
+| Zstd | Collatz | 29% | True |
 
 ---
 
