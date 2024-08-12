@@ -78,7 +78,7 @@ function generateCollatzSequence(n) {
 function toBuffer(sequence) {
     var buffer = buffer_1.Buffer.alloc(sequence.length * 4);
     for (var i = 0; i < sequence.length; i++) {
-        buffer.writeInt32LE(sequence[i], i * 4);
+        buffer.writeDoubleLE(sequence[i]);
     }
     return buffer;
 }
@@ -143,7 +143,7 @@ function toBuffer(sequence) {
                 console.error('Error during compression or decompression:', error_1);
                 return [3 /*break*/, 6];
             case 6:
-                console.dir(res, { depth: null });
+                console.log(JSON.stringify(res));
                 return [2 /*return*/];
         }
     });

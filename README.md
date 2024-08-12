@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Based on the provided tests, a Collatz Conjecture sequence can be more challenging to compress than random data.
+Based on the provided tests, a Collatz Conjecture sequence can be just as challenging to compress as random data.
 
 This can be used for 'worst-case' scenario metrics of compression efficiency, with significantly less computing power and time cost.
 
@@ -16,7 +16,7 @@ However, the drawback of random values is that they are slow to generate.
 
 Generating billions of random values is a very slow process when you are in need of data.
 
-**This is where the purpose of this Git repository comes in. It aims to demonstrate that using pseudo-random values produced from a Collatz Conjecture [1] sequence is a method that requires significantly less computational power and time, as these values are easier to calculate. Just to make it better, the end result is even better against compression algorithms.**
+**This is where the purpose of this Git repository comes in. It aims to demonstrate that using pseudo-random values produced from a Collatz Conjecture [1] sequence is a method that requires significantly less computational power and time, as these values are easier to calculate. The end result is just as challenging for compression algorithms.**
 
 To understand how easy it is to generate a Collatz Conjecture sequence, one can refer to the Collatz Conjecture description, which is a simple mathematical sequence defined as follows:
 
@@ -29,17 +29,15 @@ As we know, Collatz sequences eventually always end with the number 1. However, 
 
 Until this is proven, compression algorithms struggle to find a better pattern than simply undoing the described process (/2 || *3). This can sometimes result in a compression rate that is even worse than with random numbers, which, in computing, are not truly random.
 
-In the `res.txt` file, you can find a detailed example of the output of this program, or you can run it yourself by executing `npm i` and `node index.js`.
+In the `res.json` file, you can find an example of the output of this program, or you can run it yourself by executing `npm i` and `node index.js`.
 
-The last time I ran it, simple arithmetic sequences, where, starting from 99, each number is the previous number minus 1, achieved a compression effectiveness of 34% with Zstandard (zstd) compression. Random numbers achieved 33%, while Collatz sequences achieved 29% effectiveness, which is significantly lower than random numbers.
+The last time I ran it, a simple arithmetic sequence (n=99;n-1) achieved a compression effectiveness of 66% with Zstandard (zstd) compression. Random numbers achieved 69%, and Collatz sequence achieved 69% as well.
 
-Also, random numbers tend to have a more chaotic nature, which can result in compression effectiveness that is either exceptionally good (>90%) or extremely bad (<5%). Either you get one of those edge cases either you get an equatorial case like the one mentioned in the example data - never something in between. You have to run the program around 5 times and you will propably get one of those edge cases for random numbers. In contrast, Collatz sequences (and arithmetic) are more stable.
-
-| Method | Data | Effect | Stable |
+| Method | Data | Effect | Stable Effect |
 | --- | --- | --- | --- |
-| Zstd | Arithmetic (n=99;n-1) | 34% | True |
-| Zstd | Random (10-99, JS Math.Random()) | 33% | False |
-| Zstd | Collatz | 29% | True |
+| Zstd | Arithmetic (n=99;n-1) | 66% | True |
+| Zstd | Random (10-99, JS Math.Random()) | 66% - 69% | False |
+| Zstd | Collatz | 69% | True |
 
 ---
 
