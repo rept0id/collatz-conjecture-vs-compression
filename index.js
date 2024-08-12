@@ -106,15 +106,16 @@ function toBuffer(sequence) {
                 collatzBuffer = toBuffer(collatzSeq);
                 randomBuffer = toBuffer(randomSeq);
                 arithmeticBuffer = toBuffer(arithmeticSeq);
-                res.buff = Object();
-                res.buff.collatz = Object();
-                res.buff.collatz.length = collatzBuffer.length;
-                res.buff.random = Object();
-                res.buff.random.length = randomBuffer.length;
-                res.buff.arithmetic = Object();
-                res.buff.arithmetic.length = arithmeticBuffer.length;
+                res.seq.collatz.buff = Object();
+                res.seq.collatz.buff.length = collatzBuffer.length;
+                res.seq.random.buff = Object();
+                res.seq.random.buff.length = randomBuffer.length;
+                res.seq.arithmetic.buff = Object();
+                res.seq.arithmetic.buff.length = arithmeticBuffer.length;
                 // Compression
                 res.comp = Object();
+                // Compression : Zstd
+                res.comp.zstd = Object();
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 5, , 6]);
@@ -127,16 +128,19 @@ function toBuffer(sequence) {
                 return [4 /*yield*/, Zstd.compress(collatzBuffer)];
             case 4:
                 collatzZstd = _a.sent();
-                res.comp.zstd = Object();
-                res.comp.zstd.arithmetic = Object();
-                res.comp.zstd.arithmetic.length = arithmeticZstd.length;
-                res.comp.zstd.arithmetic.effectPc = diffPc(res.buff.arithmetic.length, res.comp.zstd.arithmetic.length);
-                res.comp.zstd.random = Object();
-                res.comp.zstd.random.length = randomZstd.length;
-                res.comp.zstd.random.effectPc = diffPc(res.buff.random.length, res.comp.zstd.random.length);
-                res.comp.zstd.collatz = Object();
-                res.comp.zstd.collatz.length = collatzZstd.length;
-                res.comp.zstd.collatz.effectPc = diffPc(res.buff.collatz.length, res.comp.zstd.collatz.length);
+                res.comp.zstd.seq = Object();
+                res.comp.zstd.seq.arithmetic = Object();
+                res.comp.zstd.seq.arithmetic.buff = Object();
+                res.comp.zstd.seq.arithmetic.buff.length = arithmeticZstd.length;
+                res.comp.zstd.seq.arithmetic.effectPc = diffPc(res.seq.arithmetic.buff.length, res.comp.zstd.seq.arithmetic.buff.length);
+                res.comp.zstd.seq.random = Object();
+                res.comp.zstd.seq.random.buff = Object();
+                res.comp.zstd.seq.random.buff.length = randomZstd.length;
+                res.comp.zstd.seq.random.effectPc = diffPc(res.seq.random.buff.length, res.comp.zstd.seq.random.buff.length);
+                res.comp.zstd.seq.collatz = Object();
+                res.comp.zstd.seq.collatz.buff = Object();
+                res.comp.zstd.seq.collatz.buff.length = collatzZstd.length;
+                res.comp.zstd.seq.collatz.effectPc = diffPc(res.seq.collatz.buff.length, res.comp.zstd.seq.collatz.buff.length);
                 return [3 /*break*/, 6];
             case 5:
                 error_1 = _a.sent();

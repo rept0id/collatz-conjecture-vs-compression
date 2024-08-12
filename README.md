@@ -1,5 +1,7 @@
 # Collatz Conjecture vs. Compression
 
+![README top image demostrating example results form bellow](/README-top.png)
+
 ## Introduction
 
 Based on the provided tests, a Collatz Conjecture sequence can be just as challenging to compress as random data.
@@ -47,7 +49,9 @@ Here, I would like to notice, that this idea came to mind recently.
 
 ## Source of inspiration
 
-The source of inspiration was Prof. *Gregor Kiczales*'s "**How to Code: Complex Data**" course, where the Collatz Conjecture is referenced as a generative recursion that is guaranteed to stop, but can't be proven - at least, till now - when it will stop. 
+The source of inspiration was Prof. *Gregor Kiczales*'s "**How to Code: Complex Data**" course. 
+
+There, the Collatz Conjecture is referenced as a generative recursion that is guaranteed to stop, although it has not yet been proven that it will always do so. However, based on experience, we believe it will stop because no starting number has been found that results in a sequence that doesn’t eventually reach 1 and stop.
 
 "How to Code: Complex Data" [2] is an amazing course. You can find it in the links or you can read the book "**How to Design Programs (HtDP)**" by *Matthias Felleisen*, *Robert Bruce Findler*, *Matthew Flatt*, **and** *Shriram Krishnamurthi*.
 

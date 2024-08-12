@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start" : "node index.js",
+    "log-start" : "node index.js > res.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "rept0id <rad@simplecode.gr>",
   "dependencies": {
     "@mongodb-js/zstd": "^1.2.0",
     "@types/node": "^22.2.0",
